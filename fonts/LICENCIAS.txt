@@ -1,0 +1,14 @@
+Tipografías alojadas en esta carpeta (subconjunto latino, formato woff2)
+
+Bricolage Grotesque
+  Autor: Mathieu Triay
+  Licencia: SIL Open Font License 1.1 — https://openfontlicense.org
+  Origen: https://fonts.google.com/specimen/Bricolage+Grotesque
+
+Instrument Sans
+  Autor: Instrument
+  Licencia: SIL Open Font License 1.1 — https://openfontlicense.org
+  Origen: https://fonts.google.com/specimen/Instrument+Sans
+
+La OFL permite usar, alojar y distribuir las fuentes libremente, también en
+proyectos comerciales. No permite venderlas por separado.

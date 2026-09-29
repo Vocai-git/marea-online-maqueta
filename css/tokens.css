@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Marea Online · Tokens de diseño
+   Todos los valores de marca viven aquí. Cambiar un token cambia la web entera.
+   Los mismos valores están en tokens.json para llevarlos a otro stack.
+   ========================================================================== */
+
+/* Fuentes alojadas en la propia web (sin Google Fonts: evita enviar la IP del visitante a terceros) */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/bricolage-grotesque-normal.woff2") format("woff2");
+  font-weight: 500 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../fonts/instrument-sans-normal.woff2") format("woff2");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../fonts/instrument-sans-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* ---- Color: marca (del logo) ---- */
+  --c-logo-lima: #C1D432;      /* lima exacto del logo: solo en el logo */
+  --c-logo-olive: #4D4D3F;     /* oliva exacto del logo: solo en el logo */
+
+  /* ---- Color: interfaz ---- */
+  --c-abyss: #1C1F17;          /* fondo más oscuro: hero, pie, sombras */
+  --c-ink: #2B2E24;            /* texto principal y superficies oscuras */
+  --c-olive: #45473B;          /* oliva: degradados y pasos intermedios */
+  --c-lima: #C8DC3A;           /* acento de marca: botón principal, detalles sobre oscuro */
+  --c-lima-hover: #D6E763;
+  --c-lima-soft: #F1F6D6;      /* fondo suave de iconos sobre claro */
+  --c-lima-deep: #5B7B12;      /* lima oscuro: enlaces, iconos y texto de acento sobre claro */
+  --c-lima-deeper: #4C6710;
+  --c-paper: #F6F6F1;          /* fondo general, claro y cálido */
+  --c-stone: #E9EAE0;          /* superficies secundarias */
+  --c-line: #E3E4DA;           /* bordes suaves */
+  --c-line-strong: #D9DBCD;
+  --c-muted: #676A5A;          /* texto secundario */
+  --c-white: #FFFFFF;
+
+  /* Sobre fondo oscuro */
+  --c-on-dark: #F6F6F1;
+  --c-on-dark-muted: rgba(255, 255, 255, .72);
+  --c-on-dark-soft: rgba(255, 255, 255, .55);
+  --c-glass: rgba(255, 255, 255, .06);
+  --c-glass-line: rgba(255, 255, 255, .12);
+
+  /* Regla de contraste: --c-lima NUNCA como texto sobre fondo claro (usar --c-lima-deep).
+     El botón lima siempre lleva texto --c-abyss. */
+
+  /* ---- Tipografía ---- */
+  --f-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --f-body: "Instrument Sans", system-ui, sans-serif;
+  --tracking-display: -0.03em;
+
+  --fs-12: 0.75rem;
+  --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.9375rem;
+  --fs-16: 1rem;
+  --fs-17: 1.0625rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-22: 1.375rem;
+  --fs-26: 1.625rem;
+  /* Titulares fluidos: móvil → escritorio */
+  --fs-h3: clamp(1.375rem, 1.2rem + .6vw, 1.625rem);
+  --fs-h2: clamp(2.125rem, 1.6rem + 1.9vw, 3rem);
+  --fs-h1: clamp(2.625rem, 1.7rem + 3.6vw, 4.125rem);
+  --fs-cta: clamp(2.25rem, 1.5rem + 2.8vw, 3.5rem);
+
+  --lh-tight: 1.04;
+  --lh-snug: 1.2;
+  --lh-body: 1.6;
+
+  /* ---- Espaciado (base 4px) ---- */
+  --s-1: .25rem;  --s-2: .5rem;  --s-3: .75rem;  --s-4: 1rem;   --s-5: 1.25rem;
+  --s-6: 1.5rem;  --s-7: 1.75rem; --s-8: 2rem;   --s-10: 2.5rem; --s-12: 3rem;
+  --s-14: 3.5rem; --s-16: 4rem;  --s-20: 5rem;   --s-24: 6rem;
+
+  /* ---- Retícula ---- */
+  --container: 1200px;
+  --gutter: 20px;              /* 20 móvil · 40 tablet (ver base.css) */
+  --section-y: var(--s-16);    /* 64 móvil · 96 escritorio */
+  --nav-h: 64px;
+
+  /* ---- Forma ---- */
+  --r-sm: 9px;
+  --r-md: 12px;                /* botones e inputs */
+  --r-lg: 16px;                /* tarjetas pequeñas */
+  --r-xl: 24px;                /* tarjetas grandes */
+  --r-2xl: 28px;
+  --r-3xl: 32px;
+  --r-pill: 999px;
+
+  /* ---- Sombras (teñidas de abyss, nunca gris neutro) ---- */
+  --sh-card: 0 1px 2px rgba(28, 31, 23, .04), 0 12px 32px -12px rgba(28, 31, 23, .12);
+  --sh-lift: 0 24px 48px -16px rgba(28, 31, 23, .22);
+  --sh-float: 0 30px 60px -20px rgba(0, 0, 0, .5);
+  --sh-lima: 0 10px 24px -10px rgba(170, 196, 40, .65);
+
+  /* ---- Movimiento ---- */
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --t-fast: .2s;
+  --t-base: .35s;
+
+  /* ---- Capas ---- */
+  --z-nav: 50;
+  --z-menu: 70;
+  --z-progress: 80;
+  --z-system: 90;              /* solo la barra de la vista previa */
+}
+
+@media (min-width: 768px) {
+  :root { --gutter: 40px; --section-y: var(--s-24); }
+}

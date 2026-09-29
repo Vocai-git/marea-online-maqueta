@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /kit.html
+Disallow: /guia.html
+
+Sitemap: https://vocai-git.github.io/marea-online-maqueta/sitemap.xml
